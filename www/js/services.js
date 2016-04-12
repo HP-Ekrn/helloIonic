@@ -47,4 +47,23 @@ angular.module('starter.services', [])
       return null;
     }
   };
-});
+})
+.factory('Reports',function(){
+  var reports = [
+   [
+      { key:"vip", title:"VIP顾客报表", icon:"img/1.png"},
+      { key : "elitedirtravel", title : "精英经销商<br/>海外游", icon:"img/2.png"},
+      { key : "eliteallowance", title : "精英美容顾问<br/>培训补贴", icon: "img/3.png"}
+   ] ,
+   [
+      { key:"vip", title:"VIP顾客报表", icon:"img/4.png"},
+      { key : "elitedirtravel", title : "精英经销商<br/>海外游", icon:"img/5.png"},
+      { key : "eliteallowance", title : "精英美容顾问<br/>培训补贴", icon: "img/6.png"}
+   ] 
+  ]
+
+  return {
+    all:function(){return reports }
+  }
+
+})

@@ -1,0 +1,13 @@
+<ion-view view-title="玫琳凯手机报表">
+  <ion-content>
+    <div>
+        <img src="img/banner.png" style="width:100%"/>
+    </div>
+    <div class="row" ng-repeat="item in items" >
+        <div class="col gitem {{$index == item.length-1?'':'vline'}}" ng-repeat="sitm in item">
+           <p> <img ng-src="sitm.icon"/></p>
+           <p> <h3>{{ sitm.title}}</h3> {{ $index}} </p>
+        </div>
+    </div>
+  </ion-content>
+</ion-view>

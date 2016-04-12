@@ -1,6 +1,10 @@
 /* Empty. Add your own CSS if you like */
+body{ }
+.grd { padding: 0 ;background-color: white; margin-top: 0}
 .gitem {
     text-align: center;
-  
+
 }
+.gitem img {  width: 40%; margin-top: 10px }
 .vline {  border-right: 1px solid #e7e7e7}
+.hline { border-bottom: 6px solid #e7e7e7 }

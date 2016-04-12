@@ -1,11 +1,7 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope) {
-    $scope.items = [];
-    $scope.items[0] = [];
-    $scope.items[0].push({ key:"vip", title:"VIP顾客报表", icon:"img/icon1.png"});
-    $scope.items[0].push({ key : "elitedirtravel", title : "精英经销商海外游", icon:"img/icon1.png"});
-    $scope.items[0].push({ key : "eliteallowance", title : "精英美容顾问培训补贴", icon: "img/icon1.png"});
+.controller('DashCtrl', function($scope,Reports) {
+    $scope.items = Reports.all();
 })
 
 .controller('ChatsCtrl', function($scope, Chats) {
