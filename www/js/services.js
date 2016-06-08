@@ -56,14 +56,22 @@ angular.module('starter.services', [])
       { key : "eliteallowance", title : "精英美容顾问<br/>培训补贴", icon: "img/3.png"}
    ] ,
    [
-      { key:"vip", title:"VIP顾客报表", icon:"img/4.png"},
-      { key : "elitedirtravel", title : "精英经销商<br/>海外游", icon:"img/5.png"},
-      { key : "eliteallowance", title : "精英美容顾问<br/>培训补贴", icon: "img/6.png"}
+      { key:"vip1", title:"VIP顾客报表1", icon:"img/4.png"},
+      { key : "elitedirtravel1", title : "1精英经销商<br/>海外游", icon:"img/5.png"},
+      { key : "eliteallowance1", title : "1精英美容顾问<br/>培训补贴", icon: "img/6.png"}
    ] 
   ]
 
   return {
-    all:function(){return reports }
+    all:function(){return reports },
+    get:function(key) {
+        for(var i=0;i < reports.length;i++){
+          for(var j=0;j<reports[i].length;j++){
+            if(reports[i][j].key == key) return reports[i][j];
+          }
+        }
+        return null;
+    }
   }
 
 })

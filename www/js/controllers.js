@@ -27,4 +27,8 @@ angular.module('starter.controllers', [])
   $scope.settings = {
     enableFriends: true
   };
-});
+})
+.controller('TstCtrl', function($scope, $stateParams, Reports) {
+  $scope.report = Reports.get($stateParams.reportKey);
+  //alert($stateParams.reportKey)
+})

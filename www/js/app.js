@@ -49,6 +49,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     }
   })
+  .state('tab.dash-detail', {
+    url: '/tst/:reportKey',
+    views: {
+      'tab-dash': {
+        templateUrl: 'templates/tst.html',
+        controller: 'TstCtrl'
+      }
+    }
+  })
 
   .state('tab.chats', {
       url: '/chats',

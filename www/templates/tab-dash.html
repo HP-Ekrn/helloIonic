@@ -4,9 +4,12 @@
         <img src="img/banner.png" style="width:100%"/>
     </div>
     <div class="row hline grd" ng-repeat="item in items" >
+        
         <div class="col gitem {{$index == item.length-1?'':'vline'}}" ng-repeat="sitm in item">
+         <a href="#/tab/tst/{{sitm.key}}">
            <p> <img ng-src="{{sitm.icon}}"/></p>
            <p ng-bind-html="sitm.title"> </p>
+         </a>
         </div>
     </div>
   </ion-content>
